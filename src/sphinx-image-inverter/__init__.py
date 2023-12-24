@@ -12,5 +12,5 @@ def copy_stylesheet(app: Sphinx, exc: None) -> None:
 
 def setup(app: Sphinx) -> dict[str, str]:
     app.add_css_file('image_dark_mode.css')
-    app.connect('build-finised', copy_stylesheet)
+    app.connect('build-finished', copy_stylesheet)
     return dict(parallel_read_safe=True, parallel_write_safe=True)
