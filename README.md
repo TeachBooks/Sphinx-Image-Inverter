@@ -4,6 +4,28 @@ Sphinx extension that inverts the colors of images in dark mode, unless they are
 # Introduction
 When toggling dark mode in JupyterBook, images and figures are inverted by default. However, this inversion might not always be desired, as certain images may not look correct when their colors are flipped. The **Sphinx-Image-Inverter** extension provides a solution by allowing selective inversion control using the `dark-light` class.
 
+# Installation
+To install the Sphinx-Image-Inverter, follow these steps:
+
+## Step 1: Install the Package
+Install the `sphinx-image-inverter` package using `pip`:
+```
+pip install sphinx-image-inverter
+```
+
+## Step 2: Add to `requirements.txt`
+Make sure that the package is included in your project's `requirements.txt` to track the dependency:
+```
+sphinx-image-inverter
+```
+
+## Step 3: Enable in `_config.yml`
+In your `_config.yml` file, add the extension to the list of Sphinx extra extensions:
+```
+sphinx: 
+    extra_extensions:
+        - sphinx-image-inverter
+```
 
 # Usage
 ## Disable Image/Figure Inversion
