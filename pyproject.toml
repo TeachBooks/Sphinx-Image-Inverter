@@ -10,6 +10,7 @@ authors = [
     { name = "Rok Štular", email = "rstular@student.tudelft.nl" },
 ]
 description = "Custom CSS that inverts the colors of images when a dark theme is toggled."
+readme = "README.md"
 dependencies = [
     "sphinx"
 ]
