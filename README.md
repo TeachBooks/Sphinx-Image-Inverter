@@ -24,7 +24,7 @@ In your `_config.yml` file, add the extension to the list of Sphinx extra extens
 ```
 sphinx: 
     extra_extensions:
-        - sphinx-image-inverter
+        - sphinx_image_inverter
 ```
 
 # Usage
