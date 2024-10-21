@@ -1,5 +1,5 @@
 # Sphinx-Image-Inverter
-Sphinx extension that inverts the colors of images in dark mode, unless they are marked with the `dark-light` class. 
+Sphinx extension that inverts the colors of images in dark mode, unless they are marked with the `dark-light` class. It retains the original colours except for black and white, so a blue line will be a blue line in both ligth and dark mode. This is particularly useful for graphs in which a certain colour is mentioned in accompanying text. This is not useful for photos.
 
 # Introduction
 When toggling dark mode in JupyterBook, images and figures are inverted by default. However, this inversion might not always be desired, as certain images may not look correct when their colors are flipped. The **Sphinx-Image-Inverter** extension provides a solution by allowing selective inversion control using the `dark-light` class.
