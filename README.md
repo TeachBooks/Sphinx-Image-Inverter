@@ -1,5 +1,10 @@
 # Sphinx Image Inverter
 
+```{admonition} User types
+:class: tip
+This page is useful for user type 3, 4 and 5.
+```
+
 ## Introduction
 
 When toggling dark mode in JupyterBook, images and figures are inverted by default. However, this inversion might not always be desired, as certain images may not look correct when their colors are flipped. The **Sphinx-Image-Inverter** extension provides a solution by allowing selective inversion control using the `dark-light` class.
