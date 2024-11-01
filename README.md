@@ -1,4 +1,4 @@
-# Sphinx Image Inverter
+# Sphinx extension: Sphinx Image Inverter
 
 ## Introduction
 
