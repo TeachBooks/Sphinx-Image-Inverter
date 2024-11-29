@@ -1,4 +1,4 @@
-# Sphinx extension: Image Inverter
+# Image Inverter
 
 ```{admonition} User types
 :class: tip
