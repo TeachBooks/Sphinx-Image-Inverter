@@ -90,5 +90,8 @@ You may want to display different text depending on whether the dark mode or lig
 ```
 These classes make sure that your text is only visible in the specified modes.
 
+### Compatible LaTeX colours
+If you'd like to use LaTeX colours which invert similarly, use the approach shown in the [TeachBook Manual - Custom Colors - Light and dark mode different colors using a color filter](https://teachbooks.io/manual/features/custom_colors.html#light-and-dark-mode-different-colors-using-a-color-filter)
+
 ## Contribute
 This tool's repository is stored on [GitHub](https://github.com/TeachBooks/Sphinx-Image-Inverter). The `README.md` of the branch `Manual` is also part of the [TeachBooks manual](https://teachbooks.io/manual/external/Sphinx-Image-Inverter/README.html) as a submodule. If you'd like to contribute, you can create a fork and open a pull request on the [GitHub repository](https://github.com/TeachBooks/Sphinx-Image-Inverter). To update the `README.md` shown in the TeachBooks manual, create a fork and open a merge request for the [GitHub repository of the manual](https://github.com/TeachBooks/manual). If you intent to clone the manual including its submodules, clone using: `git clone --recurse-submodulesgit@github.com:TeachBooks/manual.git`.
