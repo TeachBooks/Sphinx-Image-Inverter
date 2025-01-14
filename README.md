@@ -1,4 +1,13 @@
-# Sphinx extension: Image Inverter
+# Image Inverter
+
+> This page reuses BSD 3-Clause License content from {cite:t}`image`. {fa}`quote-left`{ref}`Find out more here.<external_resources>`
+
+```{admonition} User types
+:class: tip
+This page is useful for user type 4 and 5.
+```
++++
+{bdg-primary}`Sphinx Extension`
 
 ## Introduction
 
@@ -84,6 +93,7 @@ You may want to display different text depending on whether the dark mode or lig
 These classes make sure that your text is only visible in the specified modes.
 
 ### Compatible LaTeX colours
+
 If you'd like to use LaTeX colours which invert similarly, use the approach Sphinx extension [Sphinx-Named-Colors](https://github.com/TeachBooks/Sphinx-Named-Colors).
 
 ## Contribute
