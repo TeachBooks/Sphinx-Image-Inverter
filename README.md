@@ -2,12 +2,14 @@
 
 ## Introduction
 
-When toggling dark mode in JupyterBook, images and figures are inverted by default. However, this inversion might not always be desired, as certain images may not look correct when their colors are flipped. The **Sphinx-Image-Inverter** extension provides a solution by allowing selective inversion control using the `dark-light` class.
+When toggling dark mode in JupyterBook, images and figures are not inverted by default, but a white background is inserted. However, this white background might not always be desired in dark mode.
+
+The **Sphinx-Image-Inverter** extension provides a solution by applying an automatic filter to images and iframes. If this filter is not desired for certain items, the **Sphinx-Image-Inverter** extension provides a solution by allowing selective disabling using the `dark-light` class.
 
 ## How does it work?
-Sphinx extension that inverts the colors of images and iframes in dark mode but keeps the colours recognizable. This is particularly useful for graphs in which a certain colour is mentioned in accompanying text. Item are not converted if they are marked with the `dark-light` class (recommended for photos).
+This Sphinx extension applies a filter such that dark and light colors are switched, however keeps the colours recognizable. This is particularly useful for graphs in which a certain colour is mentioned in accompanying text. Items are not converted if they are marked with the `dark-light` class (recommended for example for photos).
 
-In more detail, the colors of the element are inverted, then the hue of the colors is shifted by 180 degrees, so the inverted colors change to their complementary hues. This flips the brightness and contrast, while keeping the hue somewhat recognizable (so a blue line will be a blue line in both ligth and dark mode). Black and white stay inverted (so white becomes black, and black becomes white), because they don’t have a hue. After this, the element blends with the background, making similar colors appear dark and very different colors appear bright. The overall effect creates high contrast between the element and the background, depending on their colors.
+In more detail, first the colors of the element are inverted, then the hue of the colors is shifted by 180 degrees, so the inverted colors change to their complementary hues. This flips the brightness and contrast, while keeping the hue somewhat recognizable (so a blue line will be a blue line in both ligth and dark mode). Black and white stay inverted (so white becomes black, and black becomes white), because they don’t have a hue. Next, the colors are slightly saturated to enforce a better contrast. After this, the element blends with the background, making similar colors appear dark and very different colors appear bright. The overall effect creates high contrast between the element and the background, depending on their colors.
 
 ## Installation
 To install the Sphinx-Image-Inverter, follow these steps:
@@ -82,7 +84,7 @@ You may want to display different text depending on whether the dark mode or lig
 These classes make sure that your text is only visible in the specified modes.
 
 ### Compatible LaTeX colours
-If you'd like to use LaTeX colours which invert similarly, use the approach shown in the [TeachBook Manual - Custom Colors - Light and dark mode different colors using a color filter](https://teachbooks.io/manual/features/custom_colors.html#light-and-dark-mode-different-colors-using-a-color-filter)
+If you'd like to use LaTeX colours which invert similarly, use the approach Sphinx extension [Sphinx-Named-Colors](https://github.com/TeachBooks/Sphinx-Named-Colors).
 
 ## Contribute
 This tool's repository is stored on [GitHub](https://github.com/TeachBooks/Sphinx-Image-Inverter). The `README.md` of the branch `Manual` is also part of the [TeachBooks manual](https://teachbooks.io/manual/external/Sphinx-Image-Inverter/README.html) as a submodule. If you'd like to contribute, you can create a fork and open a pull request on the [GitHub repository](https://github.com/TeachBooks/Sphinx-Image-Inverter). To update the `README.md` shown in the TeachBooks manual, create a fork and open a merge request for the [GitHub repository of the manual](https://github.com/TeachBooks/manual). If you intent to clone the manual including its submodules, clone using: `git clone --recurse-submodulesgit@github.com:TeachBooks/manual.git`.
