@@ -9,7 +9,7 @@ The **Sphinx-Image-Inverter** extension provides a solution by applying an autom
 ## How does it work?
 This Sphinx extension applies a filter such that dark and light colors are switched, however keeps the colours recognizable. This is particularly useful for graphs in which a certain colour is mentioned in accompanying text. Items are not converted if they are marked with the `dark-light` class (recommended for example for photos).
 
-In more detail, first the colors of the element are inverted, then the hue of the colors is shifted by 180 degrees, so the inverted colors change to their complementary hues. This flips the brightness and contrast, while keeping the hue somewhat recognizable (so a blue line will be a blue line in both ligth and dark mode). Black and white stay inverted (so white becomes black, and black becomes white), because they don’t have a hue. Next, the colors are slightly saturated to enforce a better contrast. After this, the element blends with the background, making similar colors appear dark and very different colors appear bright. The overall effect creates high contrast between the element and the background, depending on their colors.
+In more detail, first the colors of the element are inverted, then the hue of the colors is shifted by 180 degrees, so the inverted colors change to their complementary hues. This flips the brightness and contrast, while keeping the hue somewhat recognizable (so a blue line will be a blue line in both ligth and dark mode). Black and white stay inverted (so white becomes black, and black becomes white), because they don’t have a hue. Next, the colors are (by default) saturated to enforce a better contrast. After this, the element blends with the background, making similar colors appear dark and very different colors appear bright. The overall effect creates high contrast between the element and the background, depending on their colors.
 
 ## Installation
 To install the Sphinx-Image-Inverter, follow these steps:
@@ -38,6 +38,19 @@ sphinx:
 ```
 
 ## Usage
+
+### Disable/change saturation
+
+The saturation level is preset to `1.5`. If no saturation or a different saturation is requested, use the following in your `_config.yml`:
+
+```
+sphinx: 
+    config:
+        inverter_saturation: <saturation>
+```
+
+where `<saturation>` should be replace with a positive number. The value `1.0` represent no saturation and the value `1.5` is the default value. 
+
 ### Disable Image/Figure Inversion
 
 By default, when dark-mode is toggled in JupyterBook, all images and figures are inverted. To prevent certain images from being inverted, apply the `dark-light` class. The steps for both Markdown and HTML formats are given below.

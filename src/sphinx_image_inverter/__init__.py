@@ -9,14 +9,22 @@ except ImportError:
     __version__ = "1.0.0"
 
 def copy_stylesheet(app: Sphinx, exc: None) -> None:
+    # load template
     image_filter = os.path.join(os.path.dirname(__file__), 'static', 'image_dark_mode.css')
+    with open(image_filter,'r') as css:
+        image_filter_content = css.read()
+    image_filter_content = image_filter_content.replace("<saturation>",str(app.config.inverter_saturation))
     if app.builder.format == 'html' and not exc:
         staticdir = os.path.join(app.builder.outdir, '_static')
-        copy_asset_file(image_filter, staticdir)
+        outfile = os.path.join(staticdir,'image_dark_mode.css')
+        with open(outfile,'w') as css:
+            css.write(image_filter_content)
+        
 
 
 def setup(app: Sphinx):
     app.add_css_file('image_dark_mode.css')
+    app.add_config_value('inverter_saturation',1.5,'env')
     app.connect('build-finished', copy_stylesheet)
     return {
         "version": __version__,
