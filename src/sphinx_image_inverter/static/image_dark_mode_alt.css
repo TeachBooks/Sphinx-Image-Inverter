@@ -1,17 +1,17 @@
+html[data-theme="dark"] .logo img,
+html[data-theme="dark"] img:not(.sd-tab-set.docutils img),
+html[data-theme="dark"] figure:not(.sd-tab-set.docutils figure) img,
+html[data-theme="dark"] iframe:not([src*="youtube.com"]):not([src*="vimeo.com"]) {
+  background-color: transparent;
+  mix-blend-mode: difference;
+}
+
 html[data-theme="dark"] .logo img.dark-light,
 html[data-theme="dark"] img.dark-light:not(.sd-tab-set.docutils img),
 html[data-theme="dark"] figure:not(.sd-tab-set.docutils figure) img.dark-light,
 html[data-theme="dark"] iframe:not([src*="youtube.com"]):not([src*="vimeo.com"]).dark-light {
   filter: invert(1) hue-rotate(180deg) saturate(<saturation>);
   background-color: transparent;
-  mix-blend-mode: difference;
-}
-
-html[data-theme="dark"] .logo img:not(.dark-light):not(.only-dark),
-html[data-theme="dark"] img:not(.dark-light):not(.only-dark):not(.sd-tab-set.docutils img),
-html[data-theme="dark"] figure:not(.sd-tab-set.docutils figure) img:not(.dark-light):not(.only-dark),
-html[data-theme="dark"] iframe:not([src*="youtube.com"]):not([src*="vimeo.com"]):not(.dark-light) {
-  background-color: var(--pst-color-background);
   mix-blend-mode: difference;
 }
 
