@@ -10,7 +10,10 @@ except ImportError:
 
 def copy_stylesheet(app: Sphinx, exc: None) -> None:
     # load template
-    image_filter = os.path.join(os.path.dirname(__file__), 'static', 'image_dark_mode.css')
+    if app.config.inverter_all:
+        image_filter = os.path.join(os.path.dirname(__file__), 'static', 'image_dark_mode.css')
+    else:
+        image_filter = os.path.join(os.path.dirname(__file__), 'static', 'image_dark_mode_alt.css')
     with open(image_filter,'r') as css:
         image_filter_content = css.read()
     image_filter_content = image_filter_content.replace("<saturation>",str(app.config.inverter_saturation))
@@ -25,6 +28,7 @@ def copy_stylesheet(app: Sphinx, exc: None) -> None:
 def setup(app: Sphinx):
     app.add_css_file('image_dark_mode.css')
     app.add_config_value('inverter_saturation',1.5,'env')
+    app.add_config_value('inverter_all',True,'env')
     app.connect('build-finished', copy_stylesheet)
     return {
         "version": __version__,
