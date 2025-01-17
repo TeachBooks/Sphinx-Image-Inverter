@@ -16,8 +16,9 @@ The **Sphinx-Image-Inverter** extension provides a solution by applying an autom
 
 If the filter should _only_ be applied to a small number of images, this can be done by applying the filter _only_ to items with the `dark-light` class, in combination with setting `inverter_all` to `true` in `_config.yml`.
 
-> [!NOTE]
-> The inversion does not apply to the logo. If a different logo is preferred in dark mode compared to light mode, please use [Different logos for light and dark mode](https://pydata-sphinx-theme.readthedocs.io/en/latest/user_guide/branding.html#different-logos-for-light-and-dark-mode).
+::::{note}
+The inversion does not apply to the logo. If a different logo is preferred in dark mode compared to light mode, please use [Different logos for light and dark mode](https://pydata-sphinx-theme.readthedocs.io/en/latest/user_guide/branding.html#different-logos-for-light-and-dark-mode).
+::::
 
 ## How does it work?
 This Sphinx extension applies a filter such that dark and light colors are switched, however keeps the colours recognizable. This is particularly useful for graphs in which a certain colour is mentioned in accompanying text. Items are not converted if they are marked with the `dark-light` class (recommended for example for photos).
