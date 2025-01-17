@@ -5,10 +5,10 @@ html[data-theme="dark"] iframe:not([src*="youtube.com"]):not([src*="vimeo.com"])
   filter: none !important;
 }
 
-html[data-theme="dark"] .logo img,
-html[data-theme="dark"] img:not(.sd-tab-set.docutils img),
-html[data-theme="dark"] figure:not(.sd-tab-set.docutils figure) img,
-html[data-theme="dark"] iframe:not([src*="youtube.com"]):not([src*="vimeo.com"]) {
+html[data-theme="dark"] .logo img:not(.only-dark),
+html[data-theme="dark"] img:not(.sd-tab-set.docutils img):not(.only-dark),
+html[data-theme="dark"] figure:not(.sd-tab-set.docutils figure) img:not(.only-dark),
+html[data-theme="dark"] iframe:not([src*="youtube.com"]):not([src*="vimeo.com"]):not(.only-dark) {
   background-color: #fff !important;
   mix-blend-mode: difference !important;
   border-radius: .25rem !important;
