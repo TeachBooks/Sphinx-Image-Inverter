@@ -5,8 +5,15 @@ html[data-theme="dark"] iframe:not([src*="youtube.com"]):not([src*="vimeo.com"])
   filter: invert(1) hue-rotate(180deg) saturate(<saturation>);
   background-color: transparent;
   mix-blend-mode: difference;
-}   
+}
 
+html[data-theme="dark"] .logo img.dark-light,
+html[data-theme="dark"] img.dark-light:not(.sd-tab-set.docutils img),
+html[data-theme="dark"] figure:not(.sd-tab-set.docutils figure) img.dark-light,
+html[data-theme="dark"] iframe:not([src*="youtube.com"]):not([src*="vimeo.com"]).dark-light {
+  background-color: var(--pst-color-background);
+  mix-blend-mode: difference;
+}
 
 /* Fix alert dark mode */
 html[data-theme="dark"] .alert {
