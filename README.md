@@ -6,6 +6,8 @@ When toggling dark mode in JupyterBook, images and figures are not inverted by d
 
 The **Sphinx-Image-Inverter** extension provides a solution by applying an automatic filter to images and iframes. If this filter is not desired for certain items, the **Sphinx-Image-Inverter** extension provides a solution by allowing selective disabling using the `dark-light` class.
 
+If the filter should _only_ be applied to a small number of images, this can be done by applying the filter _only_ to items with the `dark-light` class, in combination with setting `inverter_all` to `true` in `_config.yml`.
+
 ## How does it work?
 This Sphinx extension applies a filter such that dark and light colors are switched, however keeps the colours recognizable. This is particularly useful for graphs in which a certain colour is mentioned in accompanying text. Items are not converted if they are marked with the `dark-light` class (recommended for example for photos).
 
@@ -39,6 +41,18 @@ sphinx:
 
 ## Usage
 
+### Enable/Disable Inversion of all Images/Figures
+
+By default all images and figures will be inverted. If this is wished for, use  the following in your `_config.yml`:
+
+```
+sphinx: 
+    config:
+        inverter_all: false
+```
+
+This stops automatic inversion of images and figures. Inversion of specific images and figures can be achieved by enabling this using the `dark-light` class, see below.
+
 ### Disable/change saturation
 
 The saturation level is preset to `1.5`. If no saturation or a different saturation is requested, use the following in your `_config.yml`:
@@ -51,7 +65,7 @@ sphinx:
 
 where `<saturation>` should be replace with a positive number. The value `1.0` represent no saturation and the value `1.5` is the default value. 
 
-### Disable Image/Figure Inversion
+### Disable/Enable Image/Figure Inversion
 
 By default, when dark-mode is toggled in JupyterBook, all images and figures are inverted. To prevent certain images from being inverted, apply the `dark-light` class. The steps for both Markdown and HTML formats are given below.
 
@@ -80,7 +94,9 @@ If your image or figure is defined using HTML, apply the `dark-light` class dire
 </iframe>
 ```
 
-Done! Now your image will not be inverted when dark mode is toggled.
+Now your image will not be inverted when dark mode is toggled (in the default scenario).
+
+If `inverter_all` has been set to `false`, only the image _with_ the `dark-light` class will be inverted.
 
 ### Display Text According to Theme
 
