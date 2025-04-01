@@ -1,5 +1,4 @@
-# Image Inverter
-
+````{margin}
 ```{attributiongrey} Attribution
 :class: attribution
 This page reuses BSD 3-Clause License content from {cite:t}`image`. {fa}`quote-left`{ref}`Find out more here.<external_resources>`
@@ -11,8 +10,9 @@ This page is useful for user type 4 and 5.
 ```
 +++
 {bdg-primary}`Sphinx Extension`
+````
 
-## Introduction
+# Image Inverter
 
 When toggling dark mode in JupyterBook, images and figures are not inverted by default, but a white background is inserted. However, this white background might not always be desired in dark mode.
 
