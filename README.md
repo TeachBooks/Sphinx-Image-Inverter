@@ -1,6 +1,18 @@
-# Image and iframe dark mode colour inverter
+````{margin}
+```{attributiongrey} Attribution
+:class: attribution
+This page reuses BSD 3-Clause License content from {cite:t}`image`. {fa}`quote-left`{ref}`Find out more here.<external_resources>`
+```
 
-## Introduction
+```{admonition} User types
+:class: tip
+This page is useful for user type 4 and 5.
+```
++++
+{bdg-primary}`Sphinx Extension`
+````
+
+# Image and iframe dark mode colour inverter
 
 When toggling dark mode in JupyterBook, images and figures are not inverted by default, but a white background is inserted. However, this white background might not always be desired in dark mode.
 
@@ -8,8 +20,9 @@ The **Sphinx-Image-Inverter** extension provides a solution by applying an autom
 
 If the filter should _only_ be applied to a small number of images, this can be done by applying the filter _only_ to items with the `dark-light` class, in combination with setting `inverter_all` to `true` in `_config.yml`.
 
-> [!NOTE]
-> The inversion does not apply to the logo. If a different logo is preferred in dark mode compared to light mode, please use [Different logos for light and dark mode](https://pydata-sphinx-theme.readthedocs.io/en/latest/user_guide/branding.html#different-logos-for-light-and-dark-mode).
+::::{note}
+The inversion does not apply to the logo. If a different logo is preferred in dark mode compared to light mode, please use [Different logos for light and dark mode](https://pydata-sphinx-theme.readthedocs.io/en/latest/user_guide/branding.html#different-logos-for-light-and-dark-mode).
+::::
 
 ## How does it work?
 This Sphinx extension applies a filter such that dark and light colors are switched, however keeps the colours recognizable. This is particularly useful for graphs in which a certain colour is mentioned in accompanying text. Items are not converted if they are marked with the `dark-light` class (recommended for example for photos).
