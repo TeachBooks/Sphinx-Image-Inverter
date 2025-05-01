@@ -1,4 +1,4 @@
-# Image and iframe Inverter
+# Image and iframe dark mode colour inverter
 
 ## Introduction
 
