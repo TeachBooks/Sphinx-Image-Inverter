@@ -11,7 +11,6 @@ html[data-theme="dark"] figure:not(.sd-tab-set.docutils figure) img:not(.only-da
 html[data-theme="dark"] iframe:not([src*="youtube.com"]):not([src*="vimeo.com"]):not(.only-dark):not(.sphinx) {
   background-color: #fff !important;
   mix-blend-mode: lighten !important;
-  border-radius: .25rem !important;
 }
 
 html[data-theme="dark"] .logo img.dark-light,
