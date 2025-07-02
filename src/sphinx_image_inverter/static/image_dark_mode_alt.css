@@ -13,6 +13,15 @@ html[data-theme="dark"] iframe:not([src*="youtube.com"]):not([src*="vimeo.com"])
   mix-blend-mode: plus-lighter !important;
 }
 
+/* Add consistency between dark and ligt mode images */
+.logo img:not(.only-light),
+img:not(.sd-tab-set.docutils img):not(.only-light),
+figure:not(.sd-tab-set.docutils figure) img:not(.only-light),
+iframe:not([src*="youtube.com"]):not([src*="vimeo.com"]):not(.only-light):not(.sphinx) {
+  background-color: transparent !important;
+  mix-blend-mode: darken !important;
+}
+
 html[data-theme="dark"] .logo img.dark-light,
 html[data-theme="dark"] img.dark-light:not(.sd-tab-set.docutils img),
 html[data-theme="dark"] figure:not(.sd-tab-set.docutils figure) img.dark-light,
