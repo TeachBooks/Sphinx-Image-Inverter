@@ -30,7 +30,7 @@ html[data-theme="dark"] .alert {
 html[data-theme="dark"] .sd-tab-set.docutils figure img.dark-light ,
 html[data-theme="dark"] .sd-tab-set.docutils img.dark-light {
   filter: brightness(0.8) contrast(1.2) invert(1);
-  mix-blend-mode: lighten; 
+  mix-blend-mode: plus-lighter !important; 
   display: block;
   position: relative;
   opacity: 0.9; 
