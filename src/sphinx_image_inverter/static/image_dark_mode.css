@@ -23,7 +23,7 @@ html[data-theme="dark"] .alert {
 /* Dark mode: Apply inversion specifically for tab-set figures */
 html[data-theme="dark"] .sd-tab-set.docutils figure img:not(.dark-light):not(.only-dark) ,
 html[data-theme="dark"] .sd-tab-set.docutils img:not(.dark-light):not(.only-dark) {
-  filter: brightness(0.8) contrast(1.2) invert(1);
+  filter: invert(1) hue-rotate(180deg) saturate(<saturation>);
   mix-blend-mode: lighten; 
   display: block;
   position: relative;
