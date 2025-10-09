@@ -14,7 +14,7 @@ html[data-theme="dark"] iframe:not([src*="youtube.com"]):not([src*="vimeo.com"])
 /* Add consistency between dark and ligt mode images */
 img:not(.sd-tab-set.docutils img):not(.only-light):not(.logo__image),
 figure:not(.sd-tab-set.docutils figure) img:not(.only-light),
-iframe:not([src*="youtube.com"]):not([src*="vimeo.com"]):not(.only-light):not(.sphinx) {
+iframe:not([src*="youtube.com"]):not([src*="vimeo.com"]):not(.only-light):not(.sphinx):not(.prime-applet) {
   background-color: transparent !important;
   mix-blend-mode: darken !important;
 }
