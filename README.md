@@ -16,7 +16,7 @@ This page is useful for user type 4 and 5.
 
 # Image and iframe dark mode colour inverter
 
-When toggling dark mode in JupyterBook, images and figures are not inverted by default, but a white background is inserted. However, this white background might not always be desired in dark mode.
+When toggling dark mode in TeachBook, images and figures are not inverted by default, but a white background is inserted. However, this white background might not always be desired in dark mode.
 
 The **Sphinx-Image-Inverter** extension provides a solution by applying an automatic filter to images and iframes. If this filter is not desired for certain items, the **Sphinx-Image-Inverter** extension provides a solution by allowing selective disabling using the `dark-light` class.
 
@@ -85,7 +85,7 @@ where `<saturation>` should be replace with a positive number. The value `1.0` r
 
 ### Disable/Enable Image/Figure Inversion
 
-By default, when dark-mode is toggled in JupyterBook, all images and figures are inverted. To prevent certain images from being inverted, apply the `dark-light` class. The steps for both Markdown and HTML formats are given below.
+By default, when dark-mode is toggled in TeachBook, all images and figures are inverted. To prevent certain images from being inverted, apply the `dark-light` class. The steps for both Markdown and HTML formats are given below.
 
 **For Markdown Format**
 
